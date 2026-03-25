@@ -13,9 +13,9 @@ while True:
         print("Your guess is correct")
         break
     elif(d1>g):
-        print("Your guess is less")
-    else:
         print("Your guess is more")
+    else:
+        print("Your guess is less")
 print("----PLAYER2 HAS TO PLAY----")
 while True:
     g=int(input("Guess the num:"))
@@ -24,9 +24,9 @@ while True:
         print("Your guess is correct")
         break
     elif(d2>g):
-        print("Your guess is less")
-    else:
         print("Your guess is more")
+    else:
+        print("Your guess is less")
 if(s1==s2):
     print("the match is draw")
 elif(s1>s2):
