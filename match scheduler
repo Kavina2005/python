@@ -5,17 +5,17 @@ import random
 root = tk.Tk()
 root.title("Match Scheduler Pro")
 root.geometry("750x700")
-root.config(bg="#1e1e2f")   # Dark background
+root.config(bg="#1e1e2f")  
 
 team_entries = []
 
-# ---------------- Fonts ----------------
+
 title_font = ("Arial", 18, "bold")
 label_font = ("Arial", 12)
 entry_font = ("Arial", 12)
 button_font = ("Arial", 12, "bold")
 
-# ---------------- Functions ----------------
+
 
 def create_team_fields():
     global team_entries
@@ -59,13 +59,12 @@ def generate_schedule():
         match_number += 1
 
 
-# ---------------- UI ----------------
 
-# Title
+
 tk.Label(root, text="⚽ Match Scheduler",
          font=title_font, bg="#1e1e2f", fg="#00ffcc").pack(pady=15)
 
-# Input Frame
+
 input_frame = tk.Frame(root, bg="#2b2b3c", bd=2, relief="ridge")
 input_frame.pack(pady=10, padx=10, fill="x")
 
@@ -80,23 +79,23 @@ create_btn = tk.Button(input_frame, text="Create Teams",
                        command=create_team_fields)
 create_btn.grid(row=0, column=2, padx=10)
 
-# Team Frame
+
 team_frame = tk.Frame(root, bg="#1e1e2f")
 team_frame.pack(pady=10)
 
-# Matches input
+
 tk.Label(root, text="Matches per pair:",
          font=label_font, bg="#1e1e2f", fg="white").pack()
 
 matches_entry = tk.Entry(root, font=entry_font)
 matches_entry.pack(pady=5)
 
-# Generate Button
+
 tk.Button(root, text="Generate Schedule",
           font=button_font, bg="#ff6600", fg="white",
           command=generate_schedule).pack(pady=15)
 
-# Output Box
+
 output_box = scrolledtext.ScrolledText(root,
                                        width=80, height=20,
                                        font=("Consolas", 11),
