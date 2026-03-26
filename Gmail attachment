@@ -1,5 +1,5 @@
 function saveGmailAttachments() {
-  var folder = DriveApp.getFolderById("1OXagD2eFIv9TrkZJJT5gcsOJiwPH-GyE");
+  var folder = DriveApp.getFolderById("-------");
   var threads = GmailApp.search("has:attachment is:unread");
 
   threads.forEach(function(thread) {
